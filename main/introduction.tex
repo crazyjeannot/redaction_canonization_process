@@ -1,0 +1,34 @@
+\part*{Introduction}
+\addcontentsline{toc}{part}{Introduction}
+\markboth{Introduction}{Introduction}
+
+\vspace*{\fill}
+\epigraph{Les plus beaux livres sont écrits dans une sorte de langue étrangère.}{\textit{Marcel Proust, Contre Sainte Beuve, 1954}}
+\epigraph{On peut aussi construire un modèle du \textit{processus de canonisation qui conduit à l'institution des écrivains}, à travers une analyse des différentes formes que le panthéon littéraire a revêtues, aux \textit{principes de classement} eux-mêmes \textit{pré-construits}.}{\textit{Pierre Bourdieu, Les règles de l'art, 1992}}
+
+\vfill\clearpage
+%abrupt
+
+Stendhal est aujourd'hui considéré comme un auteur incontournable de la littérature française. Pourtant, la présence de cet auteur majeur dans la conscience collective n'a pas toujours été évidente. La renommée de son oeuvre n'arrive que longtemps après sa mort. Quels processus ont joué un rôle dans la canonisation de cet auteur ? La reconnaissance des romans de Stendhal est un exemple parmi les milliers de romans du XIXème et du XXème siècle, alors pourquoi et comment se démarquent-ils des autres ouvrages laissés à l'abandon littéraire ? 
+
+L'ensemble des auteurs que l'on appelle \textit{les classiques} forme le canon littéraire. Nous pouvons définir ce dernier comme le résultat d'une tradition sélective\footcites{pollock_differencing_1999} dont la mémoire collective a gardé le souvenir parce qu’elle leur confère un statut prééminent.
+
+%Nous voulons décrire et comprendre les mécanismes derrière cette filtration temporelle, qu’ils soient liés à des politiques culturelles ou à des critères autonomes, d’ordre esthétique et critique
+
+Historiquement, les études sur les processus d'attribution de la valeur littéraire se sont intéressées aux contextes dans lesquels étaient produites les oeuvres, et aux processus de canonisation des auteurs et de leurs oeuvres. Dans \textit{Les règles de l'art}\footcites{bourdieu_les_1992}, un ouvrage majeur concernant notamment le prestige littéraire, Pierre Bourdieu montre que les mécanismes derrière la distribution du prestige littéraire sont fondés sur des facteurs appartenant aux contextes des oeuvres. Ces facteurs sont liés entre autres aux dynamiques de pouvoir au sein du champ littéraire. Les contextes de production expliqueraient deux \enquote{modes de vieillissement} des auteurs, d'une part ceux consacrés par la critique et l'enseignement et d'autre part ceux voués à une \textit{mort} littéraire rapide.
+
+Le prestige littéraire est donc une notion complexe à envisager et les mécanismes derrière cette filtration temporelle sont nombreux, qu'ils soient liés à des politiques culturelles ou à des critères autonomes, d'ordre esthétique et critique.
+
+Nous voulons, dans ce mémoire, revenir aux textes et à leur contenu. Notre hypothèse est de dire qu'il y a une esthétique particulière dans le canon, et qu'on peut la détecter et la décrire. Notre travail consistera à présenter les différents éléments mis en place pour prédire la \textit{canonicité} avec le contenu textuel des ouvrages. Nous nous fonderons sur des outils du traitement automatique des langues, de la stylométrie et des techniques d'apprentissage machine pour caractériser cette notion de canon littéraire.
+
+Les humanités numériques, et plus précisément les études littéraires computationnelles, s'inscrivent dans une nouvelle approche de compréhension de la production culturelle des siècles passés. Un des concepts sur lequel se fonde cette nouvelle approche est le \textit{\enquote{distant reading}}\footnote{Franco Moretti. « Conjectures on World Literature », \textit{New Left Review}, 2000. On notera une synthèse des écrits autour de cette notion dans un ouvrage dédié au \textit{\enquote{distant reading}}.\cite{moretti_distant_2013}.}, théorisé par Franco Moretti dans les années 2000. Cette \textit{\enquote{lecture distante}} a pour ambition d'explorer le passé littéraire avec des méthodes scientifiques sur des corpus massifs et numérisés. 
+
+Le nouveau paradigme ouvert par le numérique en stylistique et en histoire littéraire est précisément de dépasser la seule étude du canon littéraire, qui est composé simplement quelques centaines d'oeuvres en opposition avec les milliers d'oeuvres rejetées par celui-ci. Un des constats posé par Ted Underwood\footnote{\cite{underwood_distant_2019}, chap. 1 p 1 - 33} est que les études littéraires ne connaissent pas vraiment les grandes lignes structurantes de l'histoire littéraire. En effet, la discipline s'est focalisée des années durant sur une poignée d'oeuvres du canon littéraire. Cette sélection est assimilable pour certains chercheurs à un \textit{\enquote{abattoir littéraire}\footcites{moretti_slaughterhouse_2000}}. Ce dernier contient selon Moretti une histoire bien différente de celle contenue dans les canons académiques, et le \textit{\enquote{distant reading}} peut permettre de prendre en considération ces milliers de volumes oubliés. 
+
+L'utilisation de techniques du traitement automatique des langues (TAL) pour l'analyse de corpus littéraires a donné lieu à de nombreuses études, que ce soit pour la modélisation du genre\footnote{Ted Underwood, \textit{The life spans of genres} in \cite{underwood_distant_2019}, p 34 - 67}, du suspense\footcites{piper_narrativity_2021}, des thèmes\footcites{jockers_significant_2013}, ou de la paternité des oeuvres\footcites{cafiero2021psyche}. Il s'agit d'explorer des motifs et des tendances historiques sur la longue durée \footcites{braudel_mediterranee_2017}, à partir de corpus littéraires massifs et numérisés. C'est un domaine de recherche très actif aux États-unis et en Europe, mais beaucoup moins en France, bien qu'il existe également de puissants outils du TAL pour le français, ainsi que des corpus accessibles.
+
+Cette approche ne vise à effacer ni les siècles de lecture proche ni la subjectivité du chercheur. Elle permet d'élargir la focale pour interroger nos savoirs critiques hérités mais aussi pour en produire de nouveaux. 
+
+Ce mémoire s'inscrit nécessairement dans une étude de la réception et un temps sera consacré à recueillir des méta-données pour construire un canon littéraire que l'on questionnera dans les textes. L'objectif premier est d'enrichir un corpus avec le contexte social de production et de réception. 
+
+Dans un premier temps, nous définirons les enjeux de recherche autour de la notion de prestige littéraire. Dans un second temps, nous construirons un canon littéraire fondé sur une multiplicité de facteurs diagnostiqués par la recherche en sociologie et en histoire littéraire. Dans un troisième temps, nous modéliserons la notion de canon littéraire pour mettre au jour une esthétique propre. Enfin, un retour qualitatif sur les inférences statistiques de nos différents modèles sera nécessaire pour caractériser avec plus de finesse cette esthétique canonique.
