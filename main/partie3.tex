@@ -37,7 +37,7 @@ Pour renforcer les résultats, nous entreprenons une démarche aléatoire pour n
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=15cm]{img/08_main_vis_svm.png}
-    \caption{Probabilité prédite d'appartenir au canon littéraire}
+    \caption{Probabilité prédite d'appartenir au canon littéraire, canon des romans}
     \label{svm_novel}
 \end{figure}
 
@@ -72,7 +72,7 @@ Le modèle atteint 90.4\% d'efficacité en validation croisée à l'échelle de 
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=15cm]{img/09_fabula_visual_svm.png}
-    \caption{Probabilité prédite d'appartenir au canon littéraire}
+    \caption{Probabilité prédite d'appartenir au canon littéraire, canon des auteurs}
     \label{svm_author}
 \end{figure}
 
@@ -82,7 +82,7 @@ Dans la figure \ref{svm_author} nous projetons de la même manière la probabili
 
 Au regard de ces résultats, nous nous sommes demandés si le modèle ne détectait pas des indices linguistiques d'un groupe d'auteurs. 
 
-Nous voulions savoir si le modèle ne reconnaissait pas l'idiolecte des auteurs canoniques sur lequel il s'était entraîné présents dans les oeuvres de l'échantillon test. Si cela se vérifiait, notre modèle serait capable de réaliser des attributions d'auteurs et non de détecter un dialecte canonique. 
+Nous voulions savoir si le modèle ne reconnaissait pas l'idiolecte des auteurs canoniques sur lequel il s'était entraîné présents dans les œuvres de l'échantillon test. Si cela se vérifiait, notre modèle serait capable de réaliser des attributions d'auteurs et non de détecter un dialecte canonique. 
 
 Ainsi nous avons entrepris de créer des jeux de données ne comportant qu'un roman par auteur pour exclure la probabilité que le modèle ne reconnaisse les ouvrages canoniques par la signature textuelle de leur auteur. Les résultats de cette démarche gardent une très bonne stabilité, c'est à dire que le modèle détecte bien quelque chose sans relation explicite avec les auteurs. 
 
@@ -106,7 +106,7 @@ L'étude des erreurs les plus importantes de nos modèles peut dire beaucoup de 
     \label{outlier_novel}
 \end{figure}
 
-La figure \ref{outlier_novel} met en avant quatre erreurs du modèle. Nous rappelons qu'à cette échelle le modèle performe à 75\% d'efficacité, donc les erreurs sont assez nombreuses. La canonicité prédite du roman de Balzac \textit{La recherche de l'absolu} est très importante, avec près de 90\% de probabilité. Pourtant, ce roman ne fait pas partie de notre canon littéraire. Ce roman de Balzac est classé dans les Études philosophiques de La Comédie humaine. Pour notre modèle, ce roman remplit tous les critères linguistiques relatifs au canon littéraire. Il en va de même pour le roman de Marie Darrieussecq, \textit{Le mal de mer}, qui pourtant est publié 150 années plus tard. Ce dernier n'est pas particulièrement resté dans les mémoires, du moins il n'est pas rentré dans un processus de canonisation. Pourtant, notre modèle le détecte comme tel. Cela peut re-légitimer cette oeuvre, qui, au moins dans son contenu linguistique, fait aussi bien que les grands classiques de la littérature française. On constate d'autres erreurs du modèle dans le sens inverse. Des textes appartenant à notre canon littéraire ne sont pas bien notés par le modèle statistique. Par exemple, \textit{Windows on the world}, de Frédéric Beigbeder, fait parti de notre canon puisqu'il a gagné le prix Interallié en 2003. Ce roman relate les dernières minutes des victimes des attaques du World Trade Center le 11 septembre 2001. On constate ici les limites de nos méta-données, puisque le roman en question a pour vocation de raconter une histoire qui puisse toucher beaucoup de gens, en les amenant sur un sujet qui a bouleversé la société, plus que celle de rentrer dans le canon littéraire. \textit{Le désespéré}, est le premier roman de Léon Bloy, publié en 1887. Ce roman est canonique parce qu'il a été republié dans la collection \textit{Littérature Classique} de Garnier Flammarion en 2010. Il n'est pas aisé de comprendre pourquoi ce roman ne correspond pas à l'esthétique canonique perçue par notre modèle. Pour autant, la singularité de cette oeuvre a été soulignée par Pierre Glaudes dans l'appareil critique de la réédition : \enquote{\textit{Le désespéré} est surtout un aérolithe littéraire, écrit dans une langue barbelée de mots rares, étrangement mystique, une oeuvre d'une surprenante modernité}. Il semble que notre modèle donne raison à Pierre Glaudes, le roman sort des conventions et de l'esthétique du canon littéraire. 
+La figure \ref{outlier_novel} met en avant quatre erreurs du modèle. Nous rappelons qu'à cette échelle le modèle performe à 75\% d'efficacité, donc les erreurs sont assez nombreuses. La canonicité prédite du roman de Balzac \textit{La recherche de l'absolu} est très importante, avec près de 90\% de probabilité. Pourtant, ce roman ne fait pas partie de notre canon littéraire. Ce roman de Balzac est classé dans les Études philosophiques de La Comédie humaine. Pour notre modèle, ce roman remplit tous les critères linguistiques relatifs au canon littéraire. Il en va de même pour le roman de Marie Darrieussecq, \textit{Le mal de mer}, qui pourtant est publié 150 années plus tard. Ce dernier n'est pas particulièrement resté dans les mémoires, du moins il n'est pas rentré dans un processus de canonisation. Pourtant, notre modèle le détecte comme tel. Cela peut re-légitimer cette œuvre, qui, au moins dans son contenu linguistique, fait aussi bien que les grands classiques de la littérature française. On constate d'autres erreurs du modèle dans le sens inverse. Des textes appartenant à notre canon littéraire ne sont pas bien notés par le modèle statistique. Par exemple, \textit{Windows on the world}, de Frédéric Beigbeder, fait parti de notre canon puisqu'il a gagné le prix Interallié en 2003. Ce roman relate les dernières minutes des victimes des attaques du World Trade Center le 11 septembre 2001. On constate ici les limites de nos méta-données, puisque le roman en question a pour vocation de raconter une histoire qui puisse toucher beaucoup de gens, en les amenant sur un sujet qui a bouleversé la société, plus que celle de rentrer dans le canon littéraire. \textit{Le désespéré}, est le premier roman de Léon Bloy, publié en 1887. Ce roman est canonique parce qu'il a été republié dans la collection \textit{Littérature Classique} de Garnier Flammarion en 2010. Il n'est pas aisé de comprendre pourquoi ce roman ne correspond pas à l'esthétique canonique perçue par notre modèle. Pour autant, la singularité de cette œuvre a été soulignée par Pierre Glaudes dans l'appareil critique de la réédition : \enquote{\textit{Le désespéré} est surtout un aérolithe littéraire, écrit dans une langue barbelée de mots rares, étrangement mystique, une œuvre d'une surprenante modernité}. Il semble que notre modèle donne raison à Pierre Glaudes, le roman sort des conventions et de l'esthétique du canon littéraire. 
 
 
 A l'échelle des auteurs, le modèle est bien plus performant, mais quelques erreurs restent à noter comme on peut le voir en figure \ref{outlier_author}. 
@@ -135,7 +135,7 @@ Il faudrait maintenant comprendre comment nos modèles statistiques sont capable
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=17cm]{img/12_coef_fabula.png}
-    \caption{Coefficients discriminants pour le modèle, canon des auteurs}
+    \caption{coefficients discriminants pour le modèle, canon des auteurs}
     \label{coefs}
 \end{figure}
 
@@ -168,7 +168,7 @@ Nous mettons le tableau des scores en annexe \ref{perf_motif}. Les résultats so
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=17cm]{img/14_coefs_motifs.png}
-    \caption{Coefficients discriminant pour le modèle des motifs, canon des auteurs}
+    \caption{coefficients discriminant pour le modèle des motifs, canon des auteurs}
     \label{coefs_motifs}
 \end{figure}
 
@@ -197,10 +197,10 @@ Ce sont deux textes très formels, le premier présente une vulgarisation scient
     Code Civil                &         0.454353 &         0.545647 &  non\_canon \\
     \bottomrule
     \end{tabular}
-    \caption{Résultats des expérimentations hors domaine, canon des oeuvres.}
+    \caption{Résultats des expérimentations hors domaine, canon des œuvres.}
 \end{table}
 
-Le modèle reposant sur le canon des oeuvres réagit assez bien à ce test, dans le sens où il n'a l'air de reconnaître ni les traits canoniques ni ceux non-canoniques. Si les deux sont classés \enquote{non-canon}, la probabilité d'appartenance montre que le modèle n'est pas vraiment sûr de lui. Le fait que ces deux énoncés très formels soient classés comme non-canon pourrait soutenir l'idée d'un style plus développé dans le canon littéraire. 
+Le modèle reposant sur le canon des œuvres réagit assez bien à ce test, dans le sens où il n'a l'air de reconnaître ni les traits canoniques ni ceux non-canoniques. Si les deux sont classés \enquote{non-canon}, la probabilité d'appartenance montre que le modèle n'est pas vraiment sûr de lui. Le fait que ces deux énoncés très formels soient classés comme non-canon pourrait soutenir l'idée d'un style plus développé dans le canon littéraire. 
 
 
 \begin{table}[ht]
@@ -247,7 +247,7 @@ Deux éléments sont mis en avant dans ce graphique, d'une part en orange les ro
 
 \subsection{Georges Perec}
 
-Georges Perec est un écrivain qui a publié la majorité de ses oeuvres dans la deuxième partie du XX\ieme siècle. Notre canon a retenu deux de ses ouvrages, \textit{Les choses}, publié en 1965 et \textit{La vie mode d'emploi}, publié en 1978.
+Georges Perec est un écrivain qui a publié la majorité de ses œuvres dans la deuxième partie du XX\ieme siècle. Notre canon a retenu deux de ses ouvrages, \textit{Les choses}, publié en 1965 et \textit{La vie mode d'emploi}, publié en 1978.
 
 \bigskip
 \begin{figure}[!ht]
@@ -275,6 +275,6 @@ Il est important de souligner que cette expérience ne marche pas pour tous nos 
     \label{maupa}
 \end{figure}
 
-Il y a une superposition des deux ensembles des oeuvres, canoniques et non-canoniques. La critique et surtout l'institution scolaire ont tellement sacralisé le style de cet auteur que la distinction entre leurs oeuvres de premier et de second plan ne tient plus, comme si le tamis sélectif avait fini par accepter la manière d'écrire de cet écrivain dans son ensemble, peu importe ses ouvrages. 
+Il y a une superposition des deux ensembles des œuvres, canoniques et non-canoniques. La critique et surtout l'institution scolaire ont tellement sacralisé le style de cet auteur que la distinction entre leurs œuvres de premier et de second plan ne tient plus, comme si le tamis sélectif avait fini par accepter la manière d'écrire de cet écrivain dans son ensemble, peu importe ses ouvrages. 
 
-Ainsi, l'esthétique canonique constatée à l'échelle de milliers de romans par nos modèles statistiques se confirme au niveau de l'auteur. De simples ACP montrent la filtration d'un certain type de contenu dans la production des auteurs. 
+Ainsi, l'esthétique canonique constatée à l'échelle de milliers de romans par nos modèles statistiques semble sortir renforcée de nos différents tests et entrées de compréhension des données du modèle. L'étude des cas limites et les tests hors domaine d'étude semblent montrer la solidité du modèle ainsi que sa capacité à généraliser. Cette sélectivité du canon littéraire se constate aussi à l'échelle de la production d'un auteur, et ce malgré sa qualité de classique. Nos ACP montrent la filtration d'un certain type de contenu dans la production littéraire, entre un contenu conservé dans la mémoire collective et un autre laissé à l'abandon littéraire. 
